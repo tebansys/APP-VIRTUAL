@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
-import { View, StyleSheet, Text, Image, Animated } from "react-native";
-import "../app/global.css"   
+import { View, StyleSheet, Text, Image, Animated } from "react-native"; 
   
 export function GameCard({ game }) {
   return (
