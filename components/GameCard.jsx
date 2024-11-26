@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, Image, Animated } from "react-native";
   
 export function GameCard({ game }) {
   return (
-    <View className="flex-1 flex-row gap-4 w-10 h-10 bg-blue-500" key={game.slug}>
+    <View className="flex flex-row gap-4 w-10 h-10 bg-blue-500" key={game.slug}>
       <Image source={{ uri: game.image }} style={styles.image} />
       <View className="flex-shrink">
         <Text className="mt-10 text-red-500" style={styles.title}>
