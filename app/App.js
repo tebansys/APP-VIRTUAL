@@ -28,7 +28,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container2: {
-    flex: 1, //ocupa todo la pantalla verticalmente
+    // flex: 1, //ocupa todo la pantalla verticalmente
     backgroundColor: "#555",
     alignItems: "center",
     justifyContent: "center",
@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1, // Ocupa toda la pantalla verticalmente
-    backgroundColor: "#555",
+    // width:300,
+    backgroundColor: "#000",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 12,

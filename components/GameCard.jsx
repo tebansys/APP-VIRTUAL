@@ -1,17 +1,21 @@
 import { useEffect, useRef } from "react";
-import { View, StyleSheet, Text, Image, Animated } from "react-native"; 
-  
+import { View, StyleSheet, Text, Image, Animated } from "react-native";
+import { Score } from "./Score";
+
 export function GameCard({ game }) {
   return (
-    <View className="flex flex-row gap-4 w-10 h-10 bg-blue-500" key={game.slug}>
+    <View
+      className="flex-row bg-gray-500/30 p-4 rounded-xl gap-4 mb-10"
+      key={game.slug}
+    >
       <Image source={{ uri: game.image }} style={styles.image} />
       <View className="flex-shrink">
-        <Text className="mt-10 text-red-500" style={styles.title}>
+        <Text className="mb-10 text-white" style={styles.title}>
           {game.title}
         </Text>
-        <Text style={styles.score}>{game.score}</Text>  
+        <Score score={game.score} maxScore={100}/>
         <Text className="mt-2 flex-shrink" style={styles.description}>
-          {game.description.slice(0, 100)}Amet labore Lorem dolor veniam aliquip
+          {game.description.slice(0, 100)} Amet labore Lorem dolor veniam aliquip
           consectetur consectetur cupidatat non ea est ut aute. Id
           consectetur...
         </Text>
@@ -45,6 +49,9 @@ const styles = StyleSheet.create({
     gap: 10, // Espaciado entre imagen y contenido (si tu versión de React Native lo soporta)
     marginBottom: 42,
     alignItems: "flex-start", // Alinea los elementos verticalmente al inicio
+  },
+  card: {
+    marginBottom: 42,
   },
   image: {
     width: 107,
